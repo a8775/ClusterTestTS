@@ -10,7 +10,7 @@
 ```
 
 # test server&client
-1. on command test
+1. one command to test
 2. add docker file
 
 # server

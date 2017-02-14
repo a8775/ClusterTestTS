@@ -2,7 +2,7 @@
 
 # install
 ```
-git clone https://github.com/a8775/cluster-test-ts.git
+git clone https://github.com/a8775/test-cluster-ts.git
 yarn install
 tsc -p .
 ```

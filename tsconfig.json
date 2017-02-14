@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "target": "es2016",
+        "module": "commonjs",
+        "alwaysStrict": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true
+    }
+}

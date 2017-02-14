@@ -1,0 +1,13 @@
+{
+  "name": "cluster-test-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/a8775/ClusterTestTS.git",
+  "author": "a8775 <user@users.norepaly.gitgub.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^7.0.5",
+    "@types/request": "^0.0.39",
+    "request": "^2.79.0"
+  }
+}

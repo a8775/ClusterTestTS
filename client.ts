@@ -1,7 +1,9 @@
 import * as request from 'request';
+import * as http from 'http';
 
 class ClusterTestClient {
     private url = "http://127.0.0.1:9090/"
+    private keepAliveAgent = new http.Agent({ keepAlive: true });
 
     public request(data: any): Promise<string> {
         var self = this;
@@ -9,7 +11,8 @@ class ClusterTestClient {
             var options = {
                 url: self.url,
                 body: data,
-                timeout: 15000
+                timeout: 15000,
+                agent: self.keepAliveAgent
             }
 
             request.post(options,

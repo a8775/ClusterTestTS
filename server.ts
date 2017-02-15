@@ -2,7 +2,8 @@ import * as cluster from 'cluster';
 import * as http from 'http';
 
 if (cluster.isMaster) {
-    var numWorkers = require('os').cpus().length;
+    //var numWorkers = require('os').cpus().length;
+    var numWorkers = 2;
 
     console.log('Master: cluster setting up ' + numWorkers + ' workers...');
 
@@ -47,7 +48,7 @@ else {
         });
 
         request.on("end", () => {
-            let res = `Worker ${process.pid}: ${request.url}, ${body}`;
+            let res = `Worker ${process.pid}: ${request.url}, ${body}, ${request.connection.localPort}-${request.connection.remotePort} `;
             console.log(res);
             response.end(res);
         });

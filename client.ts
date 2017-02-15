@@ -3,12 +3,12 @@ import * as request from 'request';
 class ClusterTestClient {
     private url = "http://127.0.0.1:9090/"
 
-    public request<T>(data: any): Promise<T> {
+    public request(data: any): Promise<string> {
         var self = this;
-        return new Promise<T>((resolve: (data: T) => string, reject: (err: any) => void) => {
+        return new Promise<string>((resolve: (data: string) => string, reject: (err: any) => void) => {
             var options = {
                 url: self.url,
-                json: data,
+                body: data,
                 timeout: 15000
             }
 
@@ -24,15 +24,11 @@ class ClusterTestClient {
         });
     }
 
-    public test() {
-    }
-
     public run(): void {
         setTimeout((async () => {
             try {
                 let d = new Date().toISOString();
-                console.log("Request: " + d);
-                console.log("   -> " + await this.request(d));
+                console.log(`Request: ${d} -> ` + await this.request(d));
             }
             catch (err) {
                 console.error("exception: ", err);

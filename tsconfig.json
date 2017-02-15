@@ -5,6 +5,7 @@
         "module": "commonjs",
         "alwaysStrict": true,
         "noImplicitAny": true,
-        "noImplicitReturns": true
+        "noImplicitReturns": true,
+        "outDir": "./dist"
     }
 }

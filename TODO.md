@@ -10,11 +10,7 @@
 ```
 
 # TODO
-1. log client ip and port
-2. generatr some load for each request
-3. better stats with xterm?
-4. display last request for every client
-
+1. 
 
 
 
